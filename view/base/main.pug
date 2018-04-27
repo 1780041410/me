@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+  head
+    block titleName 
+    link(rel="stylesheet", href="https://cdn.bootcss.com/normalize/8.0.0/normalize.min.css")
+    link(rel="stylesheet", href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css")
+  body
+    .container
+      .nav
+        li(class="nav-item")
+          a(class="nav-link active" href="/") 首页
+        li(class="nav-item")
+          a(class="nav-link active" href="/money") 技术
+        li(class="nav-item")
+          a(class="nav-link active" href="/life") 生活
+        li(class="nav-item")
+          a(class="nav-link active" href="/me") 关于我
+      block content
+    script(src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js")
+    script(src="https://cdn.bootcss.com/popper.js/1.14.3/popper.min.js")
+    script(src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js")
