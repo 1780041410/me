@@ -10,8 +10,11 @@ module.exports = appInfo => {
   // add your config here
   config.middleware = []
 
-  // 配置模版引擎
+  // 配置视图
   config.view = {
+    root: [
+      path.join(appInfo.baseDir, 'app/view')
+    ].join(','),
     defaultViewEngine: 'nunjucks',
     mapping: {
       '.html': 'nunjucks',
@@ -19,11 +22,5 @@ module.exports = appInfo => {
     defaultExtension: '.html'
   }
   
-  // 配置视图
-  config.view = {
-    root: [
-      path.join(appInfo.baseDir, 'app/view')
-    ].join(',')
-  };
   return config
 }
